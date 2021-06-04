@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Sanity Suite">
+	<!-- <listeners>
+		<listener class-name="com.nt.listener.TestNGListener"></listener>
+	</listeners> -->
+	<parameter name="browserName" value="chrome"></parameter>
+	<test name="Flight Booking Workflow Test" enabled="true" preserve-order="true">		
+		<classes>
+			<class name="tests.BookFlightTest" />
+		</classes>
+		<!-- <groups>
+			<run>
+				<include name="sanity" />
+			</run>
+		</groups> -->
+	</test>
+</suite>
