@@ -164,7 +164,7 @@
         </div> <!-- panel Sanity_Suite -->
         <div panel-name="test-xml-Sanity_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/saritha.nair/Documents/mine/myLearning/AutomationTest-1/testng.xml</span>
+            <span class="header-content">/Users/saritha.nair/Documents/mine/myLearning/workspace/test/BookAFlight/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -172,6 +172,10 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Sanity Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Flight Booking Workflow Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.BookFlightTest&quot;/&gt;
@@ -218,20 +222,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'bookFlight')
 data.setCell(0, 2, 'tests.BookFlightTest')
-data.setCell(0, 3, 1475);
+data.setCell(0, 3, 2524);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'selectCities')
 data.setCell(1, 2, 'tests.BookFlightTest')
-data.setCell(1, 3, 731);
+data.setCell(1, 3, 652);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyBooking')
 data.setCell(2, 2, 'tests.BookFlightTest')
-data.setCell(2, 3, 38);
+data.setCell(2, 3, 39);
 window.suiteTableData['Sanity_Suite']= { tableData: data, tableDiv: 'times-div-Sanity_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Sanity_Suite">
               </div> <!-- times-div-Sanity_Suite -->
             </div> <!-- times-div -->
@@ -263,28 +267,28 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">3755 ms</span>
+                <span class="method-name">setup</span>
+                <span class="method-start">4263 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
-                <span class="method-name">setup</span>
-                <span class="method-start">3755 ms</span>
+                <span class="method-name">loginToApplication</span>
+                <span class="method-start">4263 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">selectCities(Boston, London)</span>
-                <span class="method-start">4105 ms</span>
+                <span class="method-start">4699 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">bookFlight(Tony Stark, A #23, XYZ Lane, Boston, MA, 1234, Visa, 1234567887654320, 12, 2023, Tony Stark, Thank y...)</span>
-                <span class="method-start">4871 ms</span>
+                <span class="method-start">5392 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyBooking(PendingCapture)</span>
-                <span class="method-start">6376 ms</span>
+                <span class="method-start">7944 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6431 ms</span>
+                <span class="method-start">8009 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

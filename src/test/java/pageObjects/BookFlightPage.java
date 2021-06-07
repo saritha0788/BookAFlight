@@ -11,13 +11,13 @@ public class BookFlightPage extends UIBasePage{
 	}
 
 	@FindBy(xpath = "//div[@class='container']//table")
-	WebElement searchTable;
+	private WebElement searchTable;
 	
 	@FindBy(xpath = "//div[@class='container']//table//tbody/tr[1]/td/input")
-	WebElement chooseFlightBtn1;
+	private WebElement chooseFlightBtn1;
 	
 	@FindBy(xpath = "//div[@class='container']/h2")
-	WebElement reservationTitle;
+	private WebElement reservationTitle;
 	
 
 

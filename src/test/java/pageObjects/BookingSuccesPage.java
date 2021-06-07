@@ -11,13 +11,13 @@ public class BookingSuccesPage extends UIBasePage{
 	}
 	
 	@FindBy(xpath = "//div[@class='container hero-unit']/h1")
-	WebElement succesMessage;
+	private WebElement succesMessage;
 	
 	@FindBy(xpath ="//div[@class='container hero-unit']/table//tr[1]/td[text()='Id']/following-sibling::td")
-	WebElement idValue;
+	private WebElement idValue;
 	
 	@FindBy(xpath ="//div[@class='container hero-unit']/table//tr[2]/td[text()='Status']/following-sibling::td")
-	WebElement bookingStatus;
+	private WebElement bookingStatus;
 	
 	public boolean verifyBookingSuccess(String msg) {
 		boolean successMsg = false;

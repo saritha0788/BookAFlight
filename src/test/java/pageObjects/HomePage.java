@@ -14,13 +14,13 @@ public class HomePage extends UIBasePage{
 	public Select select;
 
 	@FindBy(xpath = "//div[@class='container']//form/select[@name='fromPort']")
-	WebElement departureSelectDropdown;
+	private WebElement departureSelectDropdown;
 
 	@FindBy(xpath = "//div[@class='container']//form/select[@name='toPort']")
-	WebElement destinationSelectDropdown;
+	private WebElement destinationSelectDropdown;
 
 	@FindBy(xpath = "//div[@class='container']/input[@type='submit']")
-	WebElement submitButton;
+	private WebElement submitButton;
 
 	public void bookflight(String departure, String destination) {
 		select = new Select(departureSelectDropdown);		

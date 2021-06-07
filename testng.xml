@@ -4,6 +4,13 @@
 	<!-- <listeners>
 		<listener class-name="com.nt.listener.TestNGListener"></listener>
 	</listeners> -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<!-- <listener
+			class-name="datacollection.listeners.ScreenshotTestListener" /> -->
+	</listeners>
 	<parameter name="browserName" value="chrome"></parameter>
 	<test name="Flight Booking Workflow Test" enabled="true" preserve-order="true">		
 		<classes>

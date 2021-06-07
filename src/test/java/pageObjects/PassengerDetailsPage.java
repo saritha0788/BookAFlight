@@ -14,37 +14,37 @@ public class PassengerDetailsPage extends UIBasePage{
 	public Select select;
 	
 	@FindBy(id = "inputName")
-	WebElement passengerName;
+	private WebElement passengerName;
 	
 	@FindBy(id = "address")
-	WebElement passengerAddress;
+	private WebElement passengerAddress;
 	
 	@FindBy(id = "city")
-	WebElement passengerCity;
+	private WebElement passengerCity;
 	
 	@FindBy(id = "state")
-	WebElement passengerState;
+	private WebElement passengerState;
 	
 	@FindBy(id = "zipCode")
-	WebElement passengerZipCode;
+	private WebElement passengerZipCode;
 	
 	@FindBy(id = "cardType")
-	WebElement passengerCardType;
+	private WebElement passengerCardType;
 	
 	@FindBy(id = "creditCardNumber")
-	WebElement passengerCreditCardNumber;
+	private WebElement passengerCreditCardNumber;
 	
 	@FindBy(id = "creditCardMonth")
-	WebElement passengerCreditCardMonth;
+	private WebElement passengerCreditCardMonth;
 	
 	@FindBy(id = "creditCardYear")
-	WebElement passengerCreditCardYear;
+	private WebElement passengerCreditCardYear;
 	
 	@FindBy(id = "nameOnCard")
-	WebElement passengerNameOnCard;
+	private WebElement passengerNameOnCard;
 	
 	@FindBy(xpath = "//input[@value='Purchase Flight']")
-	WebElement purchaseFlightButton;
+	private WebElement purchaseFlightButton;
 	
 	public void enterPassengerDetails(String name, String address, String city, String state,
 			String zipcode, String cardType, String creditCardNumber,
