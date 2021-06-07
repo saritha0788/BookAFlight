@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +20,6 @@ public class UIBasePage {
 	private static String driverPath = "/src/test/resources/Driver/chromedriver"; 
 	
 	public static void initialiseBrowser(String browserName) {
-
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+driverPath);
 			driver = new ChromeDriver();
@@ -32,6 +32,11 @@ public class UIBasePage {
 	public void scrollToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
+	}
+	
+	public void waitForElement(WebElement element,int timeInSecs) {
+		WebDriverWait wait = new WebDriverWait(driver, timeInSecs);
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
 	public static void quitDriver() {

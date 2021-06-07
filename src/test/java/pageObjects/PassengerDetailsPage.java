@@ -46,6 +46,7 @@ public class PassengerDetailsPage extends UIBasePage{
 	@FindBy(xpath = "//input[@value='Purchase Flight']")
 	private WebElement purchaseFlightButton;
 	
+	
 	public void enterPassengerDetails(String name, String address, String city, String state,
 			String zipcode, String cardType, String creditCardNumber,
 			String creditCardMonth, String creditCardYear, String nameOnCard) {
@@ -61,8 +62,7 @@ public class PassengerDetailsPage extends UIBasePage{
 		passengerCreditCardMonth.sendKeys(creditCardMonth);
 		passengerCreditCardYear.sendKeys(creditCardYear);
 		passengerNameOnCard.sendKeys(nameOnCard);
-		purchaseFlightButton.click();
-		
+		purchaseFlightButton.click();		
 	}
 	
 }

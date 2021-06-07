@@ -47,33 +47,26 @@ public class BookFlightTest extends BaseTest {
 	@Test(dataProvider = "getFlightData", enabled = true,priority=0)
 	public void selectCities(String departureCity, String destinationCity) {
 		homePage.bookflight(departureCity, destinationCity);
-		Assert.assertTrue(bookFlightPage.isTablePresent(), "User is taken to search page");
+		Assert.assertTrue(bookFlightPage.isTablePresent(), "User is not taken to search page");
 	}
-
-//	@Test
-//	public void selectFlight() {
-//		bookFlightPage.clickOnFirstRow();
-//		// add assert to verify if user is taken to the Flight purchase page
-//		Assert.assertTrue(bookFlightPage.verifyBookingTitle(), "Reservation heading is present");
-//	}
 
 	@Test(dataProvider = "passengerData", enabled = true,priority=1)
 	public void bookFlight(String passengerName, String passengerAddress, String passengerCity, String passengerState,
 			String passengerZipCode, String passengerCardType, String passengerCreditCardNumber,
 			String passengerCreditCardMonth, String passengerCreditCardYear, String passengerNameOnCard,
-			String successMsg) {
+			String successMsg) {	
 		bookFlightPage.clickOnFirstRow();
 		// add assert to verify if user is taken to the Flight purchase page
 		Assert.assertTrue(bookFlightPage.verifyBookingTitle(), "Reservation heading is present");
 		passengerDetails.enterPassengerDetails(passengerName, passengerAddress, passengerCity, passengerState,
 				passengerZipCode, passengerCardType, passengerCreditCardNumber, passengerCreditCardMonth,
 				passengerCreditCardYear, passengerNameOnCard);
-		Assert.assertTrue(bookingSuccessPage.verifyBookingSuccess(successMsg), "Flight booking is successfull");
+		Assert.assertTrue(bookingSuccessPage.verifyBookingSuccess(successMsg), "Flight booking is not successfull");
 	}
 
 	@Test(dataProvider = "confirmationData", enabled = true,priority=2)
 	public void verifyBooking(String status) {
-		Assert.assertTrue(bookingSuccessPage.verifyBookingConfirmation(status), "Booking is confirmed");
+		Assert.assertTrue(bookingSuccessPage.verifyBookingConfirmation(status), "Booking is not confirmed");
 	}
 
 	// Other TCs

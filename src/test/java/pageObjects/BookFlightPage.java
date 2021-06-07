@@ -17,9 +17,7 @@ public class BookFlightPage extends UIBasePage{
 	private WebElement chooseFlightBtn1;
 	
 	@FindBy(xpath = "//div[@class='container']/h2")
-	private WebElement reservationTitle;
-	
-
+	private WebElement reservationTitle;	
 
 	public boolean isTablePresent() {
 		boolean tablePresent = false;
